@@ -1,0 +1,52 @@
+Phần 1: Phân tích các lỗi của Nam
+
+Nam có ít nhất 4 lỗi trong cách tổ chức thư mục:
+
+-Lưu bài tập trong C:\Windows\System32 là không phù hợp
+-System32 là thư mục hệ thống quan trọng của Windows.
+-Không nên đặt bài tập cá nhân/code vào đây vì dễ gây nhầm lẫn, khó quản lý và có thể gặp vấn đề về quyền truy cập.
+-Lưu toàn bộ bài tập trên ổ C là rủi ro
+Khi Windows bị lỗi và phải format/cài lại Windows trên ổ C:, thư mục chứa bài tập có thể bị xóa.
+-Vì vậy nên lưu dữ liệu cá nhân trên ổ khác như D: hoặc ổ lưu trữ riêng, đồng thời có bản sao dự phòng.
+-Tên thư mục nhap mon CNTT có khoảng trắng
+Khi gõ đường dẫn trong Terminal, khoảng trắng được hiểu là dấu phân cách giữa các đối số.
+-Có thể xử lý bằng dấu ngoặc kép, nhưng để thuận tiện khi lập trình nên dùng tên như nhap_mon_cntt.
+Phần 2: Sơ đồ cây thư mục chuẩn
+
+Có thể chuyển bài tập sang ổ D: để tách dữ liệu cá nhân khỏi hệ điều hành:
+
+D:\
+└── PTIT
+    └── NhapMonCNTT
+        ├── Session01
+        │   ├── bai1.py
+        │   └── bai2.py
+        │
+        └── Session02
+            └── bai1.py
+Quy tắc Cha – Con
+D:                    ← Cha
+└── PTIT              ← Con của D:
+    └── NhapMonCNTT   ← Con của PTIT
+        └── Session02 ← Con của NhapMonCNTT
+            └── bai1.py ← Con của Session02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
